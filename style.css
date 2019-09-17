@@ -4,12 +4,9 @@
   --purple: #f1dbff;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+  box-sizing: inherit;scroll-behavior: smooth;
 }
-* {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+
 
 ::-webkit-scrollbar {
   width: 7px;
