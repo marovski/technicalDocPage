@@ -1,160 +1,174 @@
+:root {
+  --black: #454545;
+  --yellow: #ffdf6b;
+  --purple: #f1dbff;
+}
+
+
 *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  html {
-    box-sizing: border-box;
-  }
-  body, html{
-    height:100vh;
-    font-family:'Helvetica Neue', sans-serif;
-  }
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+body, html{
+  height:100vh;
+  font-family:'Helvetica Neue', sans-serif;
+}
+
+body{
   
-  body{
-    
-    margin:0;
-    display: grid;
-    
-    grid-template-columns:  auto 80%;
-    grid-template-rows:repeat(auto, 7); 
-    grid-gap: 0.1vh;
-    background-color:#eee;
-    grid-template-areas: 
-      " navbar Intro "
-      " navbar Basics  "
-      "navbar Baby_Steps "
-      "navbar Loops "
-      " navbar Hello_World  "
-      " navbar Data_Structures "
-      "navbar footer ";
-  }
+  margin:0;
+  display: grid;
   
-  nav{
-    grid-area:navbar;
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    padding: 14px 16px;
-    font-size: 17px;
-    text-align:center;
-    background-color:#fff;
-    
-    #Header {
-      color:#9933ff;
-      &:hover{
-       
-        display:flex;
-        align-items:center;
-        justify-content:flex-start;
-        color: transparent;
-        background:url(https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F0%2F0a%2FPython.svg%2F768px-Python.svg.png&f=1);
-        height:40px;
-        
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;     
-      }
-    }
-  }
-  nav a{
-    display:flex;
-    padding: 22px;
-    flex-direction: column;
-    align-items:center;
-    justify-content:space-evenly;
-    text-decoration:none;
-    color:black;
+  grid-template-columns:  auto 80%;
+  grid-template-rows:repeat(auto, 7); 
+  grid-gap: 0.1vh;
+  background-color:#eee;
+  grid-template-areas: 
+    " navbar Intro "
+    " navbar Basics  "
+    "navbar Baby_Steps "
+    "navbar Loops "
+    " navbar Hello_World  "
+    " navbar Data_Structures "
+    "navbar footer ";
+}
+
+nav{
+  grid-area:navbar;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 14px 16px;
+  font-size: 17px;
+  text-align:center;
+  background-color:#fff;
+  
+  #Header {
+    color:#9933ff;
     &:hover{
-      background:black;
-      color:#fff;
-    }
-  
-  }
-  
-  .nav-link{
-    flex:1;
-  }
-  #main-doc{
-    
-    width:100%;
-    overflow-y:auto;
-  
-    padding:5px;
-    height:600px;
-   
-  }
-  code{
-    display:block;
-      text-align: left;
-      background-color:#f7f7f7;
-      border-radius:5px;
-  }
-  section{
-    padding: 10px;
-    background-color:#fff;
-  }
-  section h1{
-  
-    text-align:center;
-    
-  
-  }
-  section:nth-of-type(1){
-    grid-area:Intro;
-    
-    display:flex;
-    flex-direction: column;
-  
-  }
-  section:nth-of-type(2){
-    grid-area:Basics;
-    
-  }
-  section:nth-of-type(3){
-    grid-area:Baby_Steps;
-    
-  }
-  section:nth-of-type(4){
-    grid-area:Loops;
-  }
-  section:nth-of-type(5){
-    grid-area:Hello_World;
-  
-  }
-  section:nth-of-type(6){
-    grid-area:Data_Structures;
-  
-  }
-  footer{
-    grid-area:footer;
-    background-color:#fff;
-    font-size:11px;
-    font-style:italic;
-    display:flex;
-    justify-content:center;
-    
-  }
-  
-  @media only screen and (max-width: 750px){
-    body{
-    margin:0;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(auto, 8);
-    grid-template-areas: 
-      "navbar"
-      "Intro"
-      "Basics"
-      "Baby_Steps"
-      "Loops"
-      "Hello_World"
-      "Data_Structures"
-      "footer"
-  }
-    nav{
+     
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      color: transparent;
+      background:url(https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F0%2F0a%2FPython.svg%2F768px-Python.svg.png&f=1);
+      height:40px;
       
-      display:block;
-      overflow-y:auto;
-      height:100px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;     
     }
-    
   }
+}
+nav a{
+  display:flex;
+  padding: 22px;
+  flex-direction: column;
+  align-items:center;
+  justify-content:space-evenly;
+  text-decoration:none;
+  color:black;
+  &:hover{
+    background:black;
+    color:#fff;
+  }
+
+}
+
+.nav-link{
+  flex:1;
+}
+#main-doc{
+  
+  width:100%;
+  overflow-y:auto;
+
+  padding:5px;
+  height:600px;
+ 
+}
+code {
+  display: inline-block;
+  background-image: linear-gradient(to right, white, transparent);
+  color: var(--black);
+  padding: 20px;
+  border-left: 7px solid var(--yellow);
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+code::selection {
+  background-color: var(--yellow);
+}
+section{
+  padding: 10px;
+  background-color:#fff;
+}
+section h1{
+
+  text-align:center;
+  
+
+}
+section:nth-of-type(1){
+  grid-area:Intro;
+  
+  display:flex;
+  flex-direction: column;
+
+}
+section:nth-of-type(2){
+  grid-area:Basics;
+  
+}
+section:nth-of-type(3){
+  grid-area:Baby_Steps;
+  
+}
+section:nth-of-type(4){
+  grid-area:Loops;
+}
+section:nth-of-type(5){
+  grid-area:Hello_World;
+
+}
+section:nth-of-type(6){
+  grid-area:Data_Structures;
+
+}
+footer{
+  grid-area:footer;
+  background-color:#fff;
+  font-size:11px;
+  font-style:italic;
+  display:flex;
+  justify-content:center;
+  
+}
+
+@media only screen and (max-width: 750px){
+  body{
+  margin:0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(auto, 8);
+  grid-template-areas: 
+    "navbar"
+    "Intro"
+    "Basics"
+    "Baby_Steps"
+    "Loops"
+    "Hello_World"
+    "Data_Structures"
+    "footer"
+}
+  nav{
+    
+    display:block;
+    overflow-y:auto;
+    height:100px;
+  }
+  
+}
