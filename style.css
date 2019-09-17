@@ -80,11 +80,6 @@ nav a:hover {
   
 }
 
-@media screen and (max-width: 1000px) {
-  main {
-    padding: 2em;
-  }
-}
 code {
   display: inline-block;
   background-image: linear-gradient(to right, white, transparent);
