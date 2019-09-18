@@ -76,8 +76,7 @@ nav a:hover {
 #main-doc {
   width: 100%;
   overflow-y: auto;
-  height: 800px;
-  
+height: 100vh; 
 }
 
 code {
